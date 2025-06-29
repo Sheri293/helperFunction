@@ -1,0 +1,46 @@
+{
+  "name": "helper-functions-testing-suite",
+  "version": "1.0.0",
+  "description": "Comprehensive helper functions testing suite with 50+ function coverage",
+  "type": "module",
+  "scripts": {
+    "start": "node src/test-server/server.js",
+    "test": "playwright test --config=config/playwright.config.js",
+    "test:headed": "playwright test --config=config/playwright.config.js --headed",
+    "test:debug": "playwright test --config=config/playwright.config.js --debug",
+    "test:comprehensive": "playwright test --config=config/playwright.config.js comprehensive-helper-functions.test.js",
+    "test:checkout": "playwright test --config=config/playwright.config.js checkout/",
+    "test:filters": "playwright test --config=config/playwright.config.js filters/",
+    "test:products": "playwright test --config=config/playwright.config.js products/",
+    "test:integration": "playwright test --config=config/playwright.config.js integration/",
+    "test:with-email": "node scripts/test-and-email.js",
+    "test:list": "playwright test --config=config/playwright.config.js --list",
+    "test:reporter": "playwright test --config=config/playwright.config.js --reporter=html",
+    "validate": "node scripts/validate-setup.js",
+    "report": "node scripts/generate-report.js",
+    "setup": "node scripts/setup-env.js"
+  },
+  "keywords": [
+    "testing",
+    "playwright",
+    "helper-functions",
+    "api-testing",
+    "automation",
+    "quality-assurance"
+  ],
+  "author": "Senior SDET Engineer",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "dotenv": "^16.3.0",
+    "exceljs": "^4.3.0",
+    "nodemailer": "^6.9.0"
+  }
+}
